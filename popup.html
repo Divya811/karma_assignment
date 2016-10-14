@@ -1,0 +1,27 @@
+<div ng-hide="btnhide">
+<section class=" first row">
+<form name="myForm">
+	<div>
+
+		<label class="col-lg-2 col-md-2 col-sm-2 col-xs-12" translate="idtrans">Task Id :</label>
+		<input  ng-model="boxid" class="box col-lg-6 col-md-6 col-sm-10 col-xs-12" type="text" name="box" required ><br>
+		<span ng-show="myForm.box.$touched && myForm.box.$invalid">Fill the field</span>
+	</div>
+	<div class="gap">
+		<label class="col-lg-2 col-md-2 col-sm-2 col-xs-12" translate="nametrans">Task Name :</label>
+		<input  type="text" ng-model="boxname" class="box col-lg-6 col-md-6 col-sm-10 col-xs-12" name="boxname" required>
+		<span ng-show="myForm.boxname.$touched && myForm.box.$invalid">Fill the field</span>
+	</div>
+	</form>
+		
+</section>
+
+<section class="row buttons">
+	<div class="text-center col-lg-5 col-md-5 col-sm-6 col-xs-6">
+	<button ng-click="addtask()" class="text-center add1" translate="addbtntrans">Add</button>
+	</div>
+	<div class="text-center col-lg-4 col-md-4 col-sm-6 col-xs-6">
+	<button ng-click="cncltask()" class=" cancel" translate="cncltrans">cancel</button>
+	</div>
+</section>
+</div>

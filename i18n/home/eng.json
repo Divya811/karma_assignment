@@ -1,0 +1,13 @@
+{
+	"headtrans":"My to do application",
+	"snotrans":"S.No",
+	"idtrans":"Task Id",
+	"nametrans":"Task Name",
+	"marktrans":"Mark completed",
+	"rmvtrans":"Remove task",
+	"addtrans":"Add",
+	"remotrans":"Remove",
+	"addbtntrans":"Add",
+	"cncltrans":"Cancel"
+
+}

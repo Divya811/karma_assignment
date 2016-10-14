@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>My First Angular Program</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-translate/dist/angular-translate.min.js"></script>
+  <script src='node_modules/angular-translate-loader-partial/angular-translate-loader-partial.min.js' ></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script src="app.js"></script>
+  <script src="node_modules/angular-mocks/angular-mocks.js"></script> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+    <body>
+    	
+ <div class="container"  ng-controller="to-do-ctrl">
+	<header class="row">
+		<h1 class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12" translate="headtrans"></h1>
+	</header>
+	<aside class="row" ng-hide="addhide">
+		<a href="#" ng-click="open()" class="add pull-right" translate="addtrans">Add</a>
+	</aside>
+
+<select ng-change="change(val)" ng-model="val">
+	<option value='eng'>
+		English
+	</option>
+	<option value='hin'>Hindi</option>
+
+</select>
+<!-- part1 begins -->
+
+
+<!-- part1 closed -->
+
+<section class="row" ng-hide="tabhide">
+	<table class="table col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<thead>
+	<tr>
+		<th translate="snotrans"></th>
+		<th translate="idtrans"></th>
+		<th translate="nametrans"></th>
+		<th translate="marktrans"></th>
+		<th translate="rmvtrans"></th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="selectlist in arr" ng-class="{cssname:chkmdl}">
+			<td>{{$index+1}}</td>
+			<td>{{selectlist.taskid}}</td>
+			<td>{{selectlist.taskname}}</td>
+			<td>
+				<input type="checkbox" name="c1" value="c1" ng-model="chkmdl">
+			</td>
+			<td>
+				<a href="#" ng-click="remo()" class="rmv" translate="remotrans">Remove</a>
+
+			</td>
+		</tr>
+
+	</tbody>
+
+		
+	</table>
+</section>
+
+
+</div>
+
+
+    </body>
+
+
+ </html>
